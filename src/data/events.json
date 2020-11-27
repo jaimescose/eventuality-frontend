@@ -1,0 +1,123 @@
+{
+  "data": {
+    "events": [
+      {
+        "name": "First Eventuality event",
+        "datetimeFrom": "2020-08-01T00:00:00",
+        "capacity": 500,
+        "profit": false,
+        "mainCategory": {
+          "id": "1",
+          "name": "Music"
+        },
+        "subcateogries": [],
+        "updates": []
+      },
+      {
+        "name": "First Eventuality event",
+        "datetimeFrom": "2020-08-01T00:00:00",
+        "capacity": 500,
+        "profit": false,
+        "mainCategory": {
+          "id": "1",
+          "name": "Music"
+        },
+        "subcateogries": [],
+        "updates": []
+      },
+      {
+        "name": "First Eventuality event",
+        "datetimeFrom": "2020-08-01T00:00:00",
+        "capacity": 500,
+        "profit": false,
+        "mainCategory": {
+          "id": "1",
+          "name": "Music"
+        },
+        "subcateogries": [],
+        "updates": []
+      },
+      {
+        "name": "First Eventuality event",
+        "datetimeFrom": "2020-08-01T00:00:00",
+        "capacity": 500,
+        "profit": false,
+        "mainCategory": {
+          "id": "1",
+          "name": "Music"
+        },
+        "subcateogries": [],
+        "updates": []
+      },
+      {
+        "name": "First Eventuality event",
+        "datetimeFrom": "2020-08-01T00:00:00",
+        "capacity": 500,
+        "profit": false,
+        "mainCategory": {
+          "id": "1",
+          "name": "Music"
+        },
+        "subcateogries": [],
+        "updates": []
+      },
+      {
+        "name": "Second Eventuality event",
+        "datetimeFrom": "2020-08-01T00:00:00",
+        "capacity": 500,
+        "profit": false,
+        "mainCategory": {
+          "id": "1",
+          "name": "Music"
+        },
+        "subcateogries": [],
+        "updates": []
+      },
+      {
+        "name": "Third Eventuality event",
+        "datetimeFrom": "2020-08-01T00:00:00",
+        "capacity": 500,
+        "profit": false,
+        "mainCategory": {
+          "id": "1",
+          "name": "Music"
+        },
+        "subcateogries": [],
+        "updates": [
+          {
+            "datetime": "2020-07-19T02:37:43.346443",
+            "text": "This event is going to rock!"
+          },
+          {
+            "datetime": "2020-07-24T04:46:38.168311",
+            "text": "New merch is coming!"
+          },
+          {
+            "datetime": "2020-07-24T04:50:26.245525",
+            "text": "Tickers almost sold out!"
+          },
+          {
+            "datetime": "2020-07-24T04:53:34.984542",
+            "text": "New headliner coming!"
+          },
+          {
+            "datetime": "2020-07-24T05:08:22.330521",
+            "text": "New headliner coming 2!"
+          }
+        ]
+      },
+      {
+        "name": "I Eventuality event",
+        "datetimeFrom": "2020-08-01T00:00:00",
+        "capacity": 500,
+        "profit": false,
+        "mainCategory": {
+          "id": "1",
+          "name": "Music"
+        },
+        "subcateogries": [],
+        "updates": []
+      }
+    ]
+  }
+}
