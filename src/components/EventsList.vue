@@ -1,18 +1,25 @@
 <template>
   <section class="events">
-    <ul>
-      <li
-        is="EventItemSummary"
-        v-for="event in eventsList"
-        v-bind:event="event"
-        v-bind:key="event.id"
-      ></li>
-    </ul>
+    <div v-if="$apollo.queries.events.loading">
+      Loading...
+    </div>
+
+    <div v-if="events" class="content">
+      <ul>
+        <li
+          is="EventItemSummary"
+          v-for="event in events"
+          v-bind:event="event"
+          v-bind:key="event.id"
+        ></li>
+      </ul>
+    </div>
   </section>
 </template>
 
 <script>
 import EventItemSummary from "./EventItemSummary.vue";
+import { GET_EVENTS_QUERY } from '@/graphql/queries/eventQueries.js'
 
 export default {
   name: "EventsList",
@@ -21,40 +28,14 @@ export default {
   },
   data: function () {
     return {
-      eventsList: [
-        {
-          id: 0,
-          name: "Event name",
-          description: "This is the event description",
-          category: "Category",
-        },
-        {
-          id: 1,
-          name: "Event name",
-          description: "This is the event description",
-          category: "Category",
-        },
-        {
-          id: 2,
-          name: "Event name",
-          description: "This is the event description",
-          category: "Category",
-        },
-        {
-          id: 3,
-          name: "Event name",
-          description: "This is the event description",
-          category: "Category",
-        },
-        {
-          id: 4,
-          name: "Event name",
-          description: "This is the event description",
-          category: "Category",
-        },
-      ],
+      loading: false,
+      error: null,
+      events: [],
     };
   },
+  apollo: {
+    events: {query: GET_EVENTS_QUERY}
+  }
 };
 </script>
 

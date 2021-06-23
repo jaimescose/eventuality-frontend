@@ -1,7 +1,7 @@
 <template>
   <article class="card">
     <h3 class="title">{{ event.name }}</h3>
-    <p class="description">{{ event.description }}</p>
+    <p class="description">{{ event.name }}</p>
   </article>
 </template>
 
