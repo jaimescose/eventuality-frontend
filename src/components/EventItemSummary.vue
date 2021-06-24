@@ -1,6 +1,6 @@
 <template>
   <article class="card">
-    <h3 class="title">{{ event.name }}</h3>
+    <h3 class="title"> <a :href="'events/' + event.id"> {{ event.name }} </a></h3>
     <p class="description">{{ event.name }}</p>
   </article>
 </template>
