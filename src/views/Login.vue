@@ -23,6 +23,8 @@
 
 
 <script>
+import { LOGIN_USER_MUTATION } from '@/graphql/queries/userQueries.js'
+
 export default {
   name: "Login",
   data: function () {
@@ -34,11 +36,29 @@ export default {
     }
   },
   methods: {
-    login () {
-      console.log(this.email)
-      console.log(this.username)
-      console.log(this.password)
-    }
+    async login() {
+      try {
+        const response = await this.$apollo.mutate({
+          mutation: LOGIN_USER_MUTATION,
+          variables: {
+            userIdentifier: this.userIdentifier,
+            password: this.password,
+          }
+        })
+        const data = response.data.loginUser
+
+        this.exception = !data.success
+        this.exceptions = data.exceptions
+
+        if (!this.exception) {
+          console.log('perform login')
+          this.$router.replace('/feed')
+        }
+      
+      } catch (error) {
+        console.log(error)
+      }
+    },
   },
   watch: {
     userIdentifier: function (newUserIdentifier) {

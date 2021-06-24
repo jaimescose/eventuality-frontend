@@ -56,3 +56,22 @@ export const CREATE_USER_MUTATION = gql`
       }
   }
 `
+
+export const LOGIN_USER_MUTATION = gql`
+  mutation loginUser(
+    $userIdentifier: String!
+    $password: String!
+  ) {
+      loginUser (
+        userIdentifier: $userIdentifier,
+        password: $password
+      ) {
+        success
+        exceptions {
+          field
+          message
+        }
+        accessToken
+      }
+  }
+`
